@@ -28,7 +28,7 @@ jobs:
 
     - name: Build
       run: |
-        go build -v -o main${{ matrix.os == 'windows-latest' && '.exe' || '' }} ./..
+        go build -v -o main${{ matrix.os == 'windows-latest' && '.exe' || '' }} ./
 
     - name: Upload Go build artifact
       uses: actions/upload-artifact@v4
